@@ -8,12 +8,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   CameraImage imgCamera;
   CameraController cameraController;
   String result = "";
   bool isWorking = false;
 
-  initiCamera() {
+  initCamera() {
     cameraController = CameraController(cameras[0], ResolutionPreset.medium);
     cameraController.initialize().then((value) {
       if (!mounted) {
@@ -30,7 +31,6 @@ class _HomePageState extends State<HomePage> {
       });
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Container();
